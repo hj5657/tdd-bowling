@@ -16,4 +16,15 @@ public class BowlingGameTest {
         int result=game.getTotal();
         Assertions.assertEquals(300,result);
     }
+    @Test
+    void should_return_0score_when_all_is_zero(){
+        BowlingGame game=new BowlingGame();
+        int number[]=new int[21];
+        for (int i = 1; i < number.length; i++) {
+            number[i]=0;
+        }
+        game.addEachNumber(number);
+        int result=game.getTotal();
+        Assertions.assertEquals(0,result);
+    }
 }
