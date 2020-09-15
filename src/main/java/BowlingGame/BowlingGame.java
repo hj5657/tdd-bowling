@@ -28,21 +28,7 @@ public class BowlingGame {
                     totalScore=totalScore+number[i]+number[i+1];
                 }
             }else{
-                if (number[i] == 10) {
-                    cnt++;
-                    totalScore += 10;
-                    totalScore = totalScore + number[i + 1] + number[i + 2];
-                }
-                if (number[i]+number[i+1]==10){
-                    cnt++;
-                    totalScore+=10;
-                    totalScore+=number[i+2];
-                }
-                if (number[i]+number[i+1]<10){
-                    cnt++;
-                    totalScore=totalScore+number[i]+number[i+1];
-                }
-                break;
+                totalScore+=number[i];
             }
         }
     }
